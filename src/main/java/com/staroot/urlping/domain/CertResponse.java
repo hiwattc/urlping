@@ -1,4 +1,4 @@
-package com.staroot.urlping;
+package com.staroot.urlping.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,10 +9,11 @@ import java.time.LocalDateTime;
 
 @Entity
 public class CertResponse {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@Id
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDateTime logDt;
+    @Id
     private String url;
     private String sysMgr;
     private String appMgr;
@@ -87,5 +88,20 @@ public class CertResponse {
 
     public void setChain2EndDt(String chain2EndDt) {
         this.chain2EndDt = chain2EndDt;
+    }
+
+    @Override
+    public String toString() {
+        return "CertResponse{" +
+                "id=" + id +
+                ", logDt=" + logDt +
+                ", url='" + url + '\'' +
+                ", sysMgr='" + sysMgr + '\'' +
+                ", appMgr='" + appMgr + '\'' +
+                ", endDt='" + endDt + '\'' +
+                ", rootCaEndDt='" + rootCaEndDt + '\'' +
+                ", chain1EndDt='" + chain1EndDt + '\'' +
+                ", chain2EndDt='" + chain2EndDt + '\'' +
+                '}';
     }
 }

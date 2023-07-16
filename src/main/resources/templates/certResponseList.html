@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cert Response List</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" /> <!-- CSS 파일 경로에 맞게 수정해주세요 -->
+</head>
+<body>
+<h1>Cert Response List</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>URL</th>
+        <th>System Manager</th>
+        <th>Application Manager</th>
+        <th>Expiration Date</th>
+        <th>Root CA Expiration Date</th>
+        <th>Chain1 Expiration Date</th>
+        <th>Chain2 Expiration Date</th>
+        <th>Log Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="certResponse : ${certResponses}">
+        <td th:text="${certResponse.url}"></td>
+        <td th:text="${certResponse.sysMgr}"></td>
+        <td th:text="${certResponse.appMgr}"></td>
+        <td th:text="${certResponse.endDt}"></td>
+        <td th:text="${certResponse.rootCaEndDt}"></td>
+        <td th:text="${certResponse.chain1EndDt}"></td>
+        <td th:text="${certResponse.chain2EndDt}"></td>
+        <td th:text="${certResponse.logDt}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

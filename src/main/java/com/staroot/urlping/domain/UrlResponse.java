@@ -1,4 +1,4 @@
-package com.staroot.urlping;
+package com.staroot.urlping.domain;
 
 
 import jakarta.persistence.*;
@@ -37,4 +37,14 @@ public class UrlResponse {
     public void setResponse(String response) {
         this.response = response;
     }
+
+    @Override
+    public String toString() {
+        return "UrlResponse{" +
+                "id=" + id +
+                ", url='" + url + '\'' +
+                ", response='" + response + '\'' +
+                '}';
+    }
+
 }
