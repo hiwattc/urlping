@@ -1,0 +1,66 @@
+;
+;  Database file staroot.com.dns for Default zone scope in zone staroot.com.
+;      Zone version:  2971
+;
+
+@                       IN  SOA dns. hostmaster. (
+                        		2971         ; serial number
+                        		900          ; refresh
+                        		600          ; retry
+                        		86400        ; expire
+                        		3600       ) ; default TTL
+
+;
+;  Zone NS records
+;
+
+@                       NS	dns.staroot.com.
+
+;
+;  Zone records
+;
+
+@                       A	201.1.43.19
+@                       MX	20	mail2.staroot.com.
+@                       600	MX	10	mail.staroot.com.
+@                       TXT	( "v=spf1 ip4:20.10.221.23 -all" )
+2021esg                 A	101.1.43.85
+_gc._tcp.default-first-site-name._sites SRV	0 100 3268	eip_test.ini.com.
+_kerberos._tcp.default-first-site-name._sites SRV	0 100 88	eip_test.ini.com.
+_ldap._tcp.default-first-site-name._sites SRV	0 100 389	eip_test.ini.com.
+_gc._tcp                SRV	0 100 3268	eip_test.ini.com.
+_kerberos._tcp          SRV	0 100 88	eip_test.ini.com.
+_kpasswd._tcp           SRV	0 100 464	eip_test.ini.com.
+_ldap._tcp              SRV	0 100 389	eip_test.ini.com.
+_kerberos._udp          SRV	0 100 88	eip_test.ini.com.
+_kpasswd._udp           SRV	0 100 464	eip_test.ini.com.
+bdmt                    A	20.10.221.97
+bdup                    A	20.10.221.101
+be                      A	201.1.43.60
+benew                   A	201.1.43.60
+bipgw                   A	20.5.141.31
+bipgwdev                A	20.5.142.128
+blimtalk                A	20.6.37.170
+blm                     A	20.10.221.242
+blms                    A	20.10.222.72
+bmp                     A	20.5.141.145
+bmp-dev                 A	20.5.142.41
+bmon.ap                  A	20.10.221.91
+bmondev.ap               A	20.10.180.91
+bpi                     A	20.10.222.72
+bpigw                   A	20.216.132.156
+bpigw-qas               A	20.18.25.135
+bpim                    A	20.216.132.156
+bpim-qas                A	20.18.25.216
+bpimkeycloak            A	20.216.132.156
+bpimkeycloak-qas        A	20.18.25.135
+bpimkibana              A	20.216.132.156
+bpimkibana-qas          A	20.18.25.135
+bpinfra                 A	20.10.221.243
+bppos                   A	20.10.114.80
+bpqms                   A	20.10.221.91
+bpqmsdev                A	20.10.180.91
+brgocd                  A	20.216.132.156
+brgocd-grpc             A	20.216.132.156
+budit                   A	201.1.43.64
+butodiscover            A	20.18.1.69
